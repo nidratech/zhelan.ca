@@ -25,7 +25,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps, router }) => {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Zhelan</title>
+        <title>Home of the Zhelan Cardigans</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -37,8 +37,6 @@ const App: NextPage<AppProps> = ({ Component, pageProps, router }) => {
             <Component {...pageProps} key={router.route} />
           </PageTransition>
         </StyledMain>
-
-        <StyledFooter>Forged from 🔥 ©{year} Nidratech Ltd.</StyledFooter>
       </MainLayoutContainer>
     </ThemeProvider>
   );
@@ -50,11 +48,5 @@ const MainLayoutContainer = styled.div`
   min-height: 100vh;
 `;
 const StyledMain = styled.main``;
-const StyledFooter = styled.footer`
-  display: flex;
-  justify-content: center;
-  padding: ${({ theme }) => theme.spacing.large};
-  color: ${({ theme }) => theme.colors.grey};
-`;
 
 export default App;

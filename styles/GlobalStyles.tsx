@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Reset } from 'styled-reset';
+import { darken } from 'polished';
 
 import { COLOR_BRAND } from 'styles/theme';
 
@@ -13,7 +14,12 @@ export const GlobalStyle = createGlobalStyle`
   }
   a {
       color: ${COLOR_BRAND};
+      transition: all 200ms;
       text-decoration: none;
+
+      :focus, :hover {
+        color: ${darken(0.05, COLOR_BRAND)};
+      }
   }
   .page-transition-enter {
     opacity: 0;
