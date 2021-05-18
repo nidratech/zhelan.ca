@@ -3,15 +3,7 @@ import Link from 'next/link';
 import { darken } from 'polished';
 import { useRouter } from 'next/router';
 
-import BurgerMenu from './BurgerMenu';
-import CollapseMenu from './CollapseMenu';
-
-interface Props {
-  isNavbarOpen: boolean;
-  setIsNavbarOpen: (...args: any[]) => void;
-}
-
-const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props): JSX.Element => {
+const Navbar = (): JSX.Element => {
   const { pathname } = useRouter();
 
   return (
@@ -49,14 +41,8 @@ const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props): JSX.Element => {
               </Link>
             </li>
           </NavLinks>
-
-          <BurgerWrapper>
-            <BurgerMenu isNavbarOpen={isNavbarOpen} setIsNavbarOpen={setIsNavbarOpen} />
-          </BurgerWrapper>
         </FlexContainer>
       </NavBar>
-
-      <CollapseMenu isNavbarOpen={isNavbarOpen} setIsNavbarOpen={setIsNavbarOpen} />
     </>
   );
 };
@@ -67,6 +53,7 @@ const NavItem = styled.a<{ isActive?: boolean }>`
   color: ${({ isActive, theme }) => (isActive ? theme.color.brand : theme.color.grey)};
   align-items: center;
   transition: all ${({ theme }) => theme.transitionTime};
+  word-break: keep-all;
 
   :hover {
     color: ${({ isActive, theme }) =>
@@ -74,7 +61,7 @@ const NavItem = styled.a<{ isActive?: boolean }>`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    padding: 0;
+    padding: 0 3vw;
   }
 `;
 const NavBar = styled.nav`
@@ -82,7 +69,7 @@ const NavBar = styled.nav`
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 999;
 `;
 const FlexContainer = styled.div`
   max-width: 120rem;
@@ -103,17 +90,6 @@ const NavLinks = styled.ul`
   margin: auto 0;
   display: flex;
   align-items: center;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    display: none;
-  }
-`;
-const BurgerWrapper = styled.div`
-  margin: auto 0;
-
-  @media (min-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    display: none;
-  }
 `;
 
 export default Navbar;

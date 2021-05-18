@@ -102,7 +102,7 @@ const Puppies: NextPage = () => {
           https://www.zhela.ca/docs/zhelan-puppy-questionnaire.docx
         </a>
       </LitterContainer>
-      <GalleryContainer>
+      <FooterPicContainer>
         <a
           href="https://www.facebook.com/permalink.php?story_fbid=1375272386171010&id=100010647843215"
           target="_blank"
@@ -110,7 +110,7 @@ const Puppies: NextPage = () => {
         >
           <PuppiesPic src="images/puppies/all.jpg" alt="Puppies pic" />
         </a>
-      </GalleryContainer>
+      </FooterPicContainer>
     </Container>
   );
 };
@@ -183,6 +183,10 @@ const PuppiesPic = styled.img`
   width: 100%;
   max-width: 62.5rem;
   border-radius: ${({ theme }) => theme.borderRadius};
+`;
+const FooterPicContainer = styled.div`
+  width: 100%;
+  margin: ${({ theme }) => theme.space.medium} auto 0;
 `;
 
 export default Puppies;

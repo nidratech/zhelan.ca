@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { AppProps } from 'next/app';
 import Router from 'next/router';
@@ -20,8 +20,6 @@ Router.events.on('routeChangeComplete', () => {
 });
 
 const App: NextPage<AppProps> = ({ Component, pageProps, router }) => {
-  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-
   useEffect(() => {
     ReactGA.initialize(process.env.NEXT_PUBLIC_GA_TRACKING_ID as string);
   }, []);
@@ -57,7 +55,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps, router }) => {
       <GlobalStyles />
 
       <MainLayoutContainer>
-        <Navbar isNavbarOpen={isNavbarOpen} setIsNavbarOpen={setIsNavbarOpen} />
+        <Navbar />
 
         <StyledMain>
           <PageTransition timeout={200} classNames="page-transition" skipInitialTransition>

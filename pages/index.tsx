@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 
       <ContactContainer>
         <ContactHeader>Get in Touch</ContactHeader>
-        <a href="tel:+17788816864">(778) 881-6864</a>
+        {/* <a href="tel:+17788816864">(778) 881-6864</a> */}
         <a href="mailto:zhelancardigans@gmail.com">zhelancardigans@gmail.com</a>
 
         <SocialMediaContainer>
@@ -51,6 +51,7 @@ const Home: NextPage = () => {
 };
 
 const SocialMediaContainer = styled.div`
+  margin-top: ${({ theme }) => theme.space.medium};
   display: flex;
   grid-gap: ${({ theme }) => theme.space.medium};
   justify-content: center;
