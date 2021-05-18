@@ -72,8 +72,10 @@ const Puppies: NextPage = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="http://www.cardiped.net/testmating.php?dam=100716&sire=100068&fbclid=IwAR1Ve2E_FwAV5_DBo-dFbVKvS9wg4uEY2ctA1dQ_HCsf9q5ZbFzdo4cDY_4"
-            ></a>
+              href="http://www.cardiped.net/testmating.php?dam=100716&sire=100068&fbclid=IwAR3AYVMWBsX1g1QcjAokcHdJ9fWal5E8toGW45IT7LxB_p14sXARw1Ajsi8"
+            >
+              http://www.cardiped.net/testmating.php?dam=100716&sire=100068&fbclid=IwAR3AYVMWBsX1g1QcjAokcHdJ9fWal5E8toGW45IT7LxB_p14sXARw1Ajsi8
+            </a>
           </li>
           <li>The cost of a puppy is $2,500 CAD.</li>
           <li>Puppies are placed with up-to-date shots.</li>
@@ -98,8 +100,8 @@ const Puppies: NextPage = () => {
         </Ul>
         <br />
         The puppy questionnaire can be found here:{' '}
-        <a href="https://www.zhela.ca/docs/zhelan-puppy-questionnaire.docx">
-          https://www.zhela.ca/docs/zhelan-puppy-questionnaire.docx
+        <a href="https://www.zhelan.ca/docs/zhelan-puppy-questionnaire.docx">
+          https://www.zhelan.ca/docs/zhelan-puppy-questionnaire.docx
         </a>
       </LitterContainer>
       <FooterPicContainer>
