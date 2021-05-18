@@ -91,6 +91,7 @@ const FlexContainer = styled.div`
   justify-content: space-between;
   padding: 0 ${({ theme }) => theme.space.medium};
   height: ${({ theme }) => theme.space.navBarHeight};
+  background: ${({ theme }) => theme.color.background};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     padding: ${({ theme }) => `0 ${theme.space.small}`};

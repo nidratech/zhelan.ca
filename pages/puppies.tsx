@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import styled from 'styled-components';
+import ImageGallery from 'react-image-gallery';
 
 import { Container } from 'components';
 
@@ -17,20 +18,16 @@ const Puppies: NextPage = () => {
           url: 'https://www.zhelan.ca/puppies',
         }}
       />
-
-      <PosterContainer>
-        <LitterPoster
-          src="images/boris-boola-litter.jpg"
-          alt="Boris and Boola's new litter poster"
-        />
-      </PosterContainer>
+      <GalleryContainer>
+        <ImageGallery showPlayButton={false} items={images} />
+      </GalleryContainer>
 
       <LitterContainer>
         <InfoTitle>Purchase Information</InfoTitle>
         <Ul>
           <li>
-            Breeding here is to improve the breed, continue to preserve herding instinct, maintain
-            good health and temperament.
+            We are breeding to improve the breed, continue to preserve herding instinct and to
+            maintain good health and temperament.
           </li>
           <li>
             I am offering Companion/Performance pets and Show prospects (I do not sell Show
@@ -105,19 +102,61 @@ const Puppies: NextPage = () => {
           https://www.zhela.ca/docs/zhelan-puppy-questionnaire.docx
         </a>
       </LitterContainer>
-
-      <PosterContainer>
+      <GalleryContainer>
         <a
           href="https://www.facebook.com/permalink.php?story_fbid=1375272386171010&id=100010647843215"
           target="_blank"
           rel="noreferrer"
         >
-          <PuppiesPic src="images/puppies.jpg" alt="Puppies pic" />
+          <PuppiesPic src="images/puppies/all.jpg" alt="Puppies pic" />
         </a>
-      </PosterContainer>
+      </GalleryContainer>
     </Container>
   );
 };
+
+const images = [
+  {
+    original: 'https://www.zhelan.ca/images/puppies/boris-boola.jpg',
+    thumbnail: 'https://www.zhelan.ca/images/puppies/boris-boolat.jpg',
+  },
+  {
+    original: 'https://www.zhelan.ca/images/puppies/1.jpg',
+    thumbnail: 'https://www.zhelan.ca/images/puppies/1t.jpg',
+  },
+  {
+    original: 'https://www.zhelan.ca/images/puppies/2.jpg',
+    thumbnail: 'https://www.zhelan.ca/images/puppies/2t.jpg',
+  },
+  {
+    original: 'https://www.zhelan.ca/images/puppies/3.jpg',
+    thumbnail: 'https://www.zhelan.ca/images/puppies/3t.jpg',
+  },
+  {
+    original: 'https://www.zhelan.ca/images/puppies/4.jpg',
+    thumbnail: 'https://www.zhelan.ca/images/puppies/4t.jpg',
+  },
+  {
+    original: 'https://www.zhelan.ca/images/puppies/5.jpg',
+    thumbnail: 'https://www.zhelan.ca/images/puppies/5t.jpg',
+  },
+  {
+    original: 'https://www.zhelan.ca/images/puppies/6.jpg',
+    thumbnail: 'https://www.zhelan.ca/images/puppies/6t.jpg',
+  },
+  {
+    original: 'https://www.zhelan.ca/images/puppies/7.jpg',
+    thumbnail: 'https://www.zhelan.ca/images/puppies/7t.jpg',
+  },
+  {
+    original: 'https://www.zhelan.ca/images/puppies/8.jpg',
+    thumbnail: 'https://www.zhelan.ca/images/puppies/8t.jpg',
+  },
+  {
+    original: 'https://www.zhelan.ca/images/puppies/9.jpg',
+    thumbnail: 'https://www.zhelan.ca/images/puppies/9t.jpg',
+  },
+];
 
 const Ul = styled.ul`
   list-style: disc;
@@ -135,15 +174,9 @@ const LitterContainer = styled.div`
   color: ${({ theme }) => theme.color.white};
   font-size: 1.1em;
 `;
-const PosterContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-const LitterPoster = styled.img`
-  width: 100%;
-  max-width: 40rem;
+const GalleryContainer = styled.div`
+  width: 80vw;
   margin: auto;
-  border-radius: ${({ theme }) => theme.borderRadius};
 `;
 const PuppiesPic = styled.img`
   margin-top: ${({ theme }) => theme.space.large};

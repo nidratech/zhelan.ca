@@ -13,7 +13,7 @@ import { Navbar } from 'components';
 
 import '@fontsource/roboto';
 
-const year = new Date().getFullYear();
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 Router.events.on('routeChangeComplete', () => {
   ReactGA.pageview(`${window.location.pathname}${window.location.search}`);
