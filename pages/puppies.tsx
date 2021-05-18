@@ -94,7 +94,7 @@ const Puppies: NextPage = () => {
           </li>
           <li>Once the questionnaire is submitted, please allow me a week to review it.</li>
           <li>
-            Puppies are ready for pick up between 8 and 12 weeks of age. You need to pick up the
+            Puppies are ready for pick up between 9 and 12 weeks of age. You need to pick up the
             puppy in person.
           </li>
         </Ul>
@@ -121,6 +121,10 @@ const images = [
   {
     original: 'https://www.zhelan.ca/images/puppies/boris-boola.jpg',
     thumbnail: 'https://www.zhelan.ca/images/puppies/boris-boolat.jpg',
+  },
+  {
+    original: 'https://www.zhelan.ca/images/puppies/boris-boola2.jpg',
+    thumbnail: 'https://www.zhelan.ca/images/puppies/boris-boola2t.jpg',
   },
   {
     original: 'https://www.zhelan.ca/images/puppies/1.jpg',
