@@ -10,12 +10,14 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
   }
   html, body {
+    background: #363636;
     font-family: 'Roboto', sans-serif;
   }
   a {
       color: ${COLOR_BRAND};
       transition: all 200ms;
       text-decoration: none;
+      word-break: break-all;
 
       :focus, :hover {
         color: ${darken(0.05, COLOR_BRAND)};
