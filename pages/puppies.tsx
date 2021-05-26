@@ -169,11 +169,11 @@ const Ul = styled.ul`
   list-style-position: inside;
 
   li {
-    margin-top: ${({ theme }) => theme.space.medium};
+    margin-top: ${({ theme }) => theme.space.small};
   }
 `;
 const InfoTitle = styled.h3`
-  padding: ${({ theme }) => `${theme.space.large} 0 0`};
+  padding: ${({ theme }) => `${theme.space.mediumLarge} 0 ${theme.space.small}`};
   font-size: 1.25em;
 `;
 const LitterContainer = styled.div`
@@ -183,6 +183,7 @@ const LitterContainer = styled.div`
 const GalleryContainer = styled.div`
   width: 80vw;
   margin: auto;
+  max-width: 60rem;
 `;
 const PuppiesPic = styled.img`
   margin-top: ${({ theme }) => theme.space.large};
