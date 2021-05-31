@@ -39,7 +39,7 @@ const Health: NextPage = () => {
         </SpacerSection>
         <ul>
           <li>DM - Clear</li>
-          <li>Pra - Clear</li>
+          <li>PRA - Clear</li>
           <li>EIC - Clear</li>
           <li>Fluffy - Clear</li>
           <li>E-Locus -Clear</li>
