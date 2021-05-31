@@ -169,7 +169,7 @@ const Ul = styled.ul`
   list-style-position: inside;
 
   li {
-    margin-top: ${({ theme }) => theme.space.small};
+    margin-top: ${({ theme }) => theme.space.tiny};
   }
 `;
 const InfoTitle = styled.h3`

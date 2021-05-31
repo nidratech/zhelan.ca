@@ -53,7 +53,6 @@ const AboutIntro = styled.div`
 `;
 const LinkContainer = styled.div`
   margin: ${({ theme }) => `${theme.space.small} 0`};
-  font-size: 1.1em;
 `;
 const AboutBody = styled.div`
   margin-top: ${({ theme }) => theme.space.large};

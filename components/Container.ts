@@ -5,6 +5,7 @@ export default styled.div<{ isCentered?: boolean }>`
   min-width: 30rem;
   margin: ${({ theme }) => `${theme.space.medium} auto ${theme.space.large}`};
   padding: ${({ theme }) => `0 ${theme.space.large}`};
+  line-height: 1.2;
 
   ${({ isCentered }) =>
     isCentered &&

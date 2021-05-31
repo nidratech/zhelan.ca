@@ -7,53 +7,60 @@ const Navbar = (): JSX.Element => {
   const { pathname } = useRouter();
 
   return (
-    <>
-      <NavBar>
-        <FlexContainer>
-          <Link href={'/'} passHref>
-            <NavItem as="a" title={'Zhelan Cardigans'} aria-label={'Zhelan Cardigans'}>
-              <img src="images/nav-icon.png" />
-            </NavItem>
-          </Link>
+    <NavBar>
+      <FlexContainer>
+        <Link href={'/'} passHref>
+          <NavItem hideMobile as="a" title={'Zhelan Cardigans'} aria-label={'Zhelan Cardigans'}>
+            <img src="images/nav-icon.png" />
+          </NavItem>
+        </Link>
 
-          <NavLinks>
-            <li>
-              <Link href={'/'} passHref>
-                <NavItem as="a" title={'Home'} isActive={pathname === '/'}>
-                  Home
-                </NavItem>
-              </Link>
-            </li>
+        <NavLinks>
+          <li>
+            <Link href={'/'} passHref>
+              <NavItem as="a" title={'Home'} isActive={pathname === '/'}>
+                Home
+              </NavItem>
+            </Link>
+          </li>
 
-            <li>
-              <Link href={'/about'} passHref>
-                <NavItem as="a" title={'About'} isActive={pathname === '/about'}>
-                  About
-                </NavItem>
-              </Link>
-            </li>
+          <li>
+            <Link href={'/about'} passHref>
+              <NavItem as="a" title={'About'} isActive={pathname === '/about'}>
+                About
+              </NavItem>
+            </Link>
+          </li>
 
-            <li>
-              <Link href={'/puppies'} passHref>
-                <NavItem as="a" title={'Puppies'} isActive={pathname === '/puppies'}>
-                  Puppies
-                </NavItem>
-              </Link>
-            </li>
-          </NavLinks>
-        </FlexContainer>
-      </NavBar>
-    </>
+          <li>
+            <Link href={'/health'} passHref>
+              <NavItem as="a" title={'Health'} isActive={pathname === '/health'}>
+                Health
+              </NavItem>
+            </Link>
+          </li>
+
+          <li>
+            <Link href={'/puppies'} passHref>
+              <NavItem as="a" title={'Puppies'} isActive={pathname === '/puppies'}>
+                Puppies
+              </NavItem>
+            </Link>
+          </li>
+        </NavLinks>
+      </FlexContainer>
+    </NavBar>
   );
 };
 
-const NavItem = styled.a<{ isActive?: boolean }>`
+const NavItem = styled.a<{ isActive?: boolean; hideMobile?: boolean }>`
   display: flex;
   padding: 0 ${({ theme }) => theme.space.medium};
   color: ${({ isActive, theme }) => (isActive ? theme.color.brand : theme.color.grey)};
   align-items: center;
   transition: all ${({ theme }) => theme.transitionTime};
   word-break: keep-all;
+  font-size: 1.1em;
 
   :hover {
     color: ${({ isActive, theme }) =>
@@ -62,6 +69,7 @@ const NavItem = styled.a<{ isActive?: boolean }>`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     padding: 0 3vw;
+    display: ${({ hideMobile }) => (hideMobile ? 'none' : 'block')};
   }
 `;
 const NavBar = styled.nav`
@@ -90,6 +98,11 @@ const NavLinks = styled.ul`
   margin: auto 0;
   display: flex;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 export default Navbar;
