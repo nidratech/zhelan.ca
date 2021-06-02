@@ -24,10 +24,10 @@ const About: NextPage = () => {
       </ImagesContainer>
 
       <AboutBody>
-        <AboutIntro>
+        <AboutText>
           Zhelan Cardigans is a Vancouver-based kennel run by Anna Filippova - CKC and CCCC ethical
           breeder.
-        </AboutIntro>
+        </AboutText>
 
         <LinkContainer>
           <a
@@ -43,13 +43,26 @@ const About: NextPage = () => {
             https://cardigancorgi.ca/breeders/
           </a>
         </LinkContainer>
+
+        <AboutText extraMargin>We are registered in the records of Canadian Kennel Club.</AboutText>
+        <CertificateContainer>
+          <KennelImg src="images/kennel-certificate.jpg" />
+        </CertificateContainer>
       </AboutBody>
     </Container>
   );
 };
 
-const AboutIntro = styled.div`
+const KennelImg = styled.img`
+  width: 100%;
+`;
+const CertificateContainer = styled.div`
+  max-width: 600px;
+  margin: ${({ theme }) => `${theme.space.small} auto 0`};
+`;
+const AboutText = styled.p<{ extraMargin?: boolean }>`
   font-size: 1.2em;
+  margin-top: ${({ theme, extraMargin }) => (extraMargin ? theme.space.medium : 0)};
 `;
 const LinkContainer = styled.div`
   margin: ${({ theme }) => `${theme.space.small} 0`};
