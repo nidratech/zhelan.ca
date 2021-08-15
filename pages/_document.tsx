@@ -6,7 +6,7 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from 'next/document';
-import { AppType } from 'next/dist/next-server/lib/utils';
+import { AppType } from 'next/dist/shared/lib/utils';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
